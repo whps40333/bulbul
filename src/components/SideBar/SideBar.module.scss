@@ -42,9 +42,7 @@
     }
 
     &:checked ~ .Nav .NavItem {
-      /*只有開啟時 delay .15s */
       transition: opacity 0.2s ease-out 0.15s;
-      /*開啟時透明度為1*/
       opacity: 1;
     }
 
