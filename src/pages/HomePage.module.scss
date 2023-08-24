@@ -1,0 +1,37 @@
+.HomePage {
+  width: 100%;
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 23% 77%;
+    /* Set the gap between columns */
+    align-items: start;
+    width: 100%;
+  }
+
+  .LogoContainer {
+    position: fixed;
+    top: 1.2rem; /* Adjusted top value: 46px / 16px */
+    right: 1rem; /* Adjusted left value: 296.22px / 16px */
+    z-index: 100;
+
+    @media (min-width: 1024px) {
+      position: fixed;
+      top: 2rem; /* Adjusted top value: 46px / 16px */
+      left: 320px; /* Adjusted left value: 296.22px / 16px */
+      z-index: 100;
+    }
+  }
+
+  .Content {
+    position: absolute;
+    top: 87px;
+    display: grid;
+    grid-template-rows: minmax(300px, 3fr) auto;
+
+    @media (min-width: 1024px) {
+      top: 0;
+      left: 345px;
+    }
+  }
+}

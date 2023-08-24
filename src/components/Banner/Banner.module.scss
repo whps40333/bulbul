@@ -1,0 +1,45 @@
+.Banner {
+  background-image: url("../../img/bulbulBanner.png");
+  background-size: 200%;
+  background-position: right 35% bottom 45%;
+  z-index: 0;
+  width: 100%;
+
+  & h2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 1.5rem 0 10rem;
+    font-weight: 600;
+    font-size: 3rem;
+    z-index: 1;
+    color: #fff;
+    line-height: 1;
+    width: fit-content;
+
+    @media (min-width: 768px) {
+      padding: 20rem 1.5rem 0 15rem;
+      // position: absolute; /* Position the heading */
+      // top: 20rem; /* Adjust as needed */
+      // right: 1.5rem; /* Adjust as needed */
+    }
+
+    @media (min-width: 1024px) {
+      padding: 25rem 1.5rem 0 40rem;
+    }
+  }
+
+  & p {
+    color: #fff;
+    font-weight: 200;
+    width: fit-content;
+    padding: 1rem 1rem 1.5rem 4rem;
+
+    @media (min-width: 768px) {
+      padding: 1rem 1rem 1.5rem 10rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 1rem 1rem 1.5rem 35rem;
+    }
+  }
+}

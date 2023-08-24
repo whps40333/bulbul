@@ -1,0 +1,21 @@
+.CardList {
+  display: flex;
+  flex-flow: wrap row;
+  gap: 0.1875rem;
+  background-color: #dcccbc;
+  padding: 0.1875rem 0.125rem 0.25rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0.1875rem 0.1875rem 0.3125rem;
+    gap: 0.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    gap: 0.3125rem;
+    background-color: #dcccbc;
+    padding: 3.634375rem 3.17125rem 5.25rem;
+  }
+}

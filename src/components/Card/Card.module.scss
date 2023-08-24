@@ -1,0 +1,70 @@
+.Card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+
+  .OuterCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #aa6666, $alpha: 0.6);
+    width: 1.5625rem; /* 25px / 16px */
+    height: 1.5625rem; /* 25px / 16px */
+    border-radius: 100%;
+    position: absolute;
+    /* 新增：將外部圓圈設置為絕對定位 */
+    left: 1rem; /* 13px / 16px */
+    top: 4rem; /* 45px / 16px */
+
+    @media (min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($color: #aa6666, $alpha: 0.6);
+      width: 1.5625rem; /* 25px / 16px */
+      height: 1.5625rem; /* 25px / 16px */
+      border-radius: 100%;
+      position: absolute;
+      /* 新增：將外部圓圈設置為絕對定位 */
+      left: 0.8125rem; /* 13px / 16px */
+      top: 2.8125rem; /* 45px / 16px */
+    }
+
+    .InnerCircle {
+      background-color: #dcccbc;
+      width: 0.5625rem; /* 9px / 16px */
+      height: 0.5625rem; /* 9px / 16px */
+      border-radius: 100%;
+      @media (min-width: 768px) {
+        background-color: #dcccbc;
+        width: 0.5625rem; /* 9px / 16px */
+        height: 0.5625rem; /* 9px / 16px */
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .Title {
+    flex: 1;
+    font-size: 2rem; /* 24px / 16px */
+    padding: 0 2rem 0 0;
+    font-weight: bolder;
+
+    @media (min-width: 1024px) {
+      flex: 1;
+      font-size: 1.5rem; /* 24px / 16px */
+      font-weight: bolder;
+    }
+  }
+
+  .Content {
+    flex: 6;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+      flex: 5;
+      justify-content: center;
+    }
+  }
+}

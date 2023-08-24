@@ -1,0 +1,139 @@
+.SideBar {
+  position: fixed;
+  width: 100%;
+  height: 87px;
+  background-color: #fff;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0.1875rem 0.1875rem 0.3125rem 0.125rem rgba(0, 0, 0, 0.2);
+
+  @media (min-width: 1024px) {
+    background-color: #fff;
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    width: 345px;
+    height: 100%; /* Make Sidebar height 100% for larger screens */
+  }
+
+  & header {
+    color: #000;
+    margin-top: 2rem;
+    font-size: 1.2rem; /* 1.8rem / 16px */
+    font-weight: bolder;
+
+    @media (min-width: 1024px) {
+      color: #000;
+      margin: 4.895rem 0 4.73rem; /* 78.33px / 16px, 75.67px / 16px */
+      font-size: 2rem; /* 1.8rem / 16px */
+      font-weight: bolder;
+    }
+  }
+
+  .NavbarToggle {
+    position: absolute;
+    visibility: hidden;
+
+    &:checked ~ .Nav {
+      transform: scale(1, 1);
+      box-shadow: 0.1875rem 0.1875rem 0.3125rem 0.125rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:checked ~ .Nav .NavItem {
+      /*只有開啟時 delay .15s */
+      transition: opacity 0.2s ease-out 0.15s;
+      /*開啟時透明度為1*/
+      opacity: 1;
+    }
+
+    &:checked ~ .NavbarLabel .LineTop {
+      transform: rotateZ(-45deg);
+    }
+
+    &:checked ~ .NavbarLabel .LineMiddle {
+      opacity: 0;
+    }
+
+    &:checked ~ .NavbarLabel .LineBottom {
+      transform: rotateZ(45deg);
+    }
+  }
+
+  .Nav {
+    position: absolute;
+    top: 100%;
+    background: #ffffff;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-out;
+
+    .NavList {
+      display: flex;
+      flex-flow: nowrap column;
+      gap: 1.35875rem;
+      align-items: center;
+      padding: 3rem;
+
+      .NavItem {
+        color: #000;
+        font-size: 1rem; /* 1rem / 16px */
+        font-weight: 900;
+
+        &:hover {
+          color: #aa6666;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      all: unset;
+
+      .NavList {
+        padding: 0;
+      }
+
+      .NavItem {
+        opacity: 1;
+      }
+    }
+  }
+
+  .NavbarLabel {
+    position: absolute;
+    top: 2rem;
+    bottom: 0;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+
+    transition: all 0.5s 0.5s;
+
+    .LineTop,
+    .LineMiddle,
+    .LineBottom {
+      width: 30px;
+      height: 3px;
+      background: #000;
+      margin: 0.5rem 0;
+      transition: transform 0.3s, opacity 0.3s;
+      transform-origin: right;
+    }
+
+    .LineTop {
+      margin-top: 0;
+    }
+
+    .LineBottom {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}
