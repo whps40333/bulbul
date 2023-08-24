@@ -5,12 +5,14 @@ import data from "../components/Card/introduce.json";
 import Banner from "../components/Banner/Banner";
 import SideBar from "../components/SideBar/SideBar";
 import styles from "./HomePage.module.scss";
+import birdImage from "../img/bulbulBanner.png";
 
 const HomePage = () => {
   const birdInfo = {
     title: "白頭翁(Chinese bulbul)",
     description:
       "又名白頭鵯。以果實、昆蟲為主食，無法消化小米、穀類。平均壽命約 8~10 年。",
+    image: birdImage,
   };
 
   const [sidebarChecked, setSidebarChecked] = useState(false);
@@ -31,7 +33,11 @@ const HomePage = () => {
           top: sidebarChecked ? "334px" : " ", // Adjusted values
         }}
       >
-        <Banner title={birdInfo.title} description={birdInfo.description} />
+        <Banner
+          title={birdInfo.title}
+          description={birdInfo.description}
+          backgroundImage={birdInfo.image}
+        />
         <CardList data={data} />
       </div>
     </div>
