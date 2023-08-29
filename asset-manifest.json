@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a4d684b9.css",
+    "main.js": "/static/js/main.1136c164.js",
+    "static/js/787.4e421409.chunk.js": "/static/js/787.4e421409.chunk.js",
+    "static/media/bulbulBanner.png": "/static/media/bulbulBanner.7448c34cdcaadca30c5c.png",
+    "index.html": "/index.html",
+    "main.a4d684b9.css.map": "/static/css/main.a4d684b9.css.map",
+    "main.1136c164.js.map": "/static/js/main.1136c164.js.map",
+    "787.4e421409.chunk.js.map": "/static/js/787.4e421409.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4d684b9.css",
+    "static/js/main.1136c164.js"
+  ]
+}
